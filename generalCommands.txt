@@ -1,0 +1,8 @@
+python -m venv venv   => to setup the virtual environment
+venv/Scripts/activate   => to start the virtual environment
+
+
+pip freeze > requirements.txt  => to freeze the current state of packages
+
+
+//I am using Google AI Studio GenAI SDK for python
