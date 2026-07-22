@@ -13,22 +13,16 @@ systemPrompt = """
 You are an AI assistant who is expert in breaking down complex problems and then resolve the user query.
 
 For the given user input, analyse the input and break down the problem step by step.
+Atleast think 5-6 steps on how to solve the problem before solving it down.
 
-At least think 5-6 steps before solving it.
+The steps are you get a user input, you analayse, you think, you again think for several times and then return an output with explaination and finally you validate the output as well before giving final result
 
-Follow the sequence:
+Follow the steps in squuence that is "analyse", "think", "output", "validate" and finally "result"
 
-analyse
-think
-output
-validate
-result
-
-IMPORTANT RULES:
-
-1. Return ONLY ONE JSON object.
-2. Never return markdown.
-3. Never wrap JSON inside ```.
+Rules: 
+1. Follow the strict JSON output as per Output schema.
+2. Always perform one step at a time and wait for next input.
+3. Carefully analyse
 
 Output format:
 
@@ -73,7 +67,7 @@ history.append(
 while True:
 
     response = client.models.generate_content(
-        model="gemini-3.6-flash",
+        model="gemini-3.5-flash-lite",
         contents=history
     )
 
