@@ -1,25 +1,15 @@
 import json
 import requests
 from dotenv import load_dotenv
-# from langfuse import observe
 from google import genai
 import os
 
 load_dotenv()
 
-# --------------------------------------------------
-# GEMINI CLIENT
-# --------------------------------------------------
-
 client = genai.Client(
     api_key=os.getenv("GEMINI_API_KEY")
 )
 
-# --------------------------------------------------
-# TOOLS
-# --------------------------------------------------
-
-# @observe()
 def run_command(command):
     print("🔨 Tool Called: run_command", command)
 
@@ -27,8 +17,6 @@ def run_command(command):
 
     return result
 
-
-# @observe()
 def get_weather(city: str):
     print("🔨 Tool Called: get_weather", city)
 
@@ -41,14 +29,9 @@ def get_weather(city: str):
     return "Something went wrong"
 
 
-# @observe()
 def add(x, y):
     print("🔨 Tool Called: add", x, y)
     return x + y
-
-# --------------------------------------------------
-# AVAILABLE TOOLS
-# --------------------------------------------------
 
 available_tools = {
     "get_weather": {
@@ -68,10 +51,6 @@ available_tools = {
     }
 }
 
-
-# --------------------------------------------------
-# SYSTEM PROMPT
-# --------------------------------------------------
 
 system_prompt = """
     You are a helpful AI Assistant specialized in resolving user queries.
@@ -143,10 +122,6 @@ system_prompt = """
 
 """
 
-# --------------------------------------------------
-# JSON SCHEMA
-# --------------------------------------------------
-
 response_schema = {
     "type": "object",
     "properties": {
@@ -177,9 +152,6 @@ response_schema = {
     ]
 }
 
-# --------------------------------------------------
-# HELPER FUNCTION
-# --------------------------------------------------
 
 def ask_gemini(user_input, previous_id=None):
     interaction = client.interactions.create(
@@ -195,41 +167,25 @@ def ask_gemini(user_input, previous_id=None):
     )
     return interaction
 
-# --------------------------------------------------
-# MAIN AGENT LOOP
-# --------------------------------------------------
 previous_id = None
 
 while True:
     user_query = input("> ")
 
-    # ----------------------------------------------
-    # NEW USER QUERY
-    # ----------------------------------------------
     interaction = ask_gemini(user_query, previous_id)
     previous_id = interaction.id
 
     while True:
 
-        # Get Gemini's JSON response
         parsed_output = json.loads(interaction.output_text)
         print("this is the parsed output", parsed_output, "ending of parsed output")
-        # ------------------------------------------
-        # PLAN
-        # ------------------------------------------
 
         if parsed_output.get("step") == "plan":
-            # print(f"🧠: {parsed_output.get('content')}")
             interaction = ask_gemini("Continue to the next step.", previous_id)
 
             previous_id = interaction.id
 
             continue
-
-
-        # ------------------------------------------
-        # ACTION
-        # ------------------------------------------
 
         if parsed_output.get("step") == "action":
 
@@ -237,7 +193,6 @@ while True:
             tool_input = parsed_output.get("input")
 
             if tool_name not in available_tools:
-                # print(f"❌ Unknown tool: {tool_name}")
                 interaction = ask_gemini(
                     f"""
                     The requested tool '{tool_name}' does not exist.
@@ -251,13 +206,7 @@ while True:
                 previous_id = interaction.id
                 continue
 
-            # Get tool function
             tool_function = available_tools[tool_name]["fn"]
-
-
-            # --------------------------------------
-            # CALL TOOL
-            # --------------------------------------
 
             if tool_name == "add":
 
@@ -270,36 +219,19 @@ while True:
             else:
                 output = tool_function(tool_input)
 
-
-            # --------------------------------------
-            # OBSERVATION
-            # --------------------------------------
-
             observation = {"step": "observe", "content": str(output)}
 
             print(f"👀: {output}")
-
-
-            # --------------------------------------
-            # CONTINUE USING previous_interaction_id
-            # --------------------------------------
 
             interaction = ask_gemini(json.dumps(observation), previous_id)
             previous_id = interaction.id
             continue
 
-        # ------------------------------------------
-        # OBSERVE
-        # ------------------------------------------
         if parsed_output.get("step") == "observe":
-            # print(f"👀: {parsed_output.get('content')}")
+            print(f"👀: {parsed_output.get('content')}")
             interaction = ask_gemini("Use the observation and continue to the next step.", previous_id)
             previous_id = interaction.id
             continue
-
-        # ------------------------------------------
-        # FINAL OUTPUT
-        # ------------------------------------------
 
         if parsed_output.get("step") == "output":
             print(f"🤖: {parsed_output.get('content')}")
