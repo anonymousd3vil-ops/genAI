@@ -4,7 +4,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_ollama import OllamaEmbeddings
+from langchain_ollama import OllamaEmbeddings, ChatOllama
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient
 
@@ -38,17 +38,57 @@ embedder = OllamaEmbeddings(
 # vector_store.add_documents(documents=split_docs)
 print("INJECTION DONE")
 
-retriver = QdrantVectorStore.from_existing_collection(
+vector_store = QdrantVectorStore.from_existing_collection(
     embedding=embedder,
     collection_name="learing_langchain",
     url="http://localhost:6333",
 )
 
-search_result = retriver.similarity_search(
-    query="What is loops in python?"
+llm = ChatOllama(
+    model="qwen3:4b",
+    temperature=0,
 )
 
-print("Releveant Chunks: ", search_result)
+query = input("Query >")
+
+# Retrieve relevant documents from Qdrant
+search_result = vector_store.similarity_search(
+    query,
+    k=4
+)
+
+SYSTEM_PRMPT = """
+You are a Smart AI Chat Bot.
+Analyze the context given below and answer the user's question
+based only on the provided context.
+
+If the question is not releted to the given context, Just say "Problem is not availabe in the given PDF or context."
+
+CONTEXT:
+
+"""
+
+# Add retrieved chunks to context
+for doc in search_result:
+    SYSTEM_PRMPT += "\n\n" + doc.page_content
+
+
+messages = [
+    (
+        "system",
+        SYSTEM_PRMPT,
+    ),
+    (
+        "human",
+        query,
+    ),
+]
+
+ai_msg = llm.invoke(messages)
+
+print(ai_msg.content)
+
+# print("Releveant Chunks: ", search_result)
 
 # print("DOCS Length: ", len(docs))
 # print("Split DOCS Length: ", len(split_docs))
