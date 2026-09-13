@@ -10,8 +10,13 @@ from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_ollama import OllamaEmbeddings, ChatOllama
 from langchain_qdrant import QdrantVectorStore
+from concurrent.futures import ThreadPoolExecutor
 
-
+def retrieve_chunks(question):
+    return vector_store.similarity_search(
+        question,
+        k=4
+    )
 
 pdfPath = Path(__file__).parent / "Technical Communication.pdf"
 loader = PyPDFLoader(file_path=pdfPath)
@@ -43,7 +48,7 @@ embedder = OllamaEmbeddings(
 
 # vector_store.add_documents(documents=split_docs)
 # end = time.time()
-print("INJECTION DONE")
+print("Chunking.....\nDone....")
 # print("Execution time:", end - start, "seconds")
 
 vector_store = QdrantVectorStore.from_existing_collection(
@@ -191,22 +196,26 @@ messages = [
 question_response = llm.invoke(messages)
 releted_questions = json.loads(question_response.content)
 
-print(releted_questions)
+releted_questions.append(query)
+
+# print(releted_questions)
 
 releted_chunks = {}
-count = 0
-for question in releted_questions:
-    chunks = vector_store.similarity_search(
-        question,
-        k=4
-    )
 
-    for chunk in chunks:
-        releted_chunks[chunk.page_content] = chunk
+print("Retriving Releted Context......")
 
-    print("Question Analysed!!")
+with ThreadPoolExecutor(max_workers=len(releted_questions)) as executor:
+    results = executor.map(retrieve_chunks, releted_questions)
+
+    for question, chunks in zip(releted_questions, results):
+        for chunk in chunks:
+            releted_chunks[chunk.page_content] = chunk
+
+        # print(f"Question Analysed: {question}")
 
 releted_chunks = list(releted_chunks.values())
+
+print("Context Retrival Done....")
 
 SYSTEM_PRMPT = f"""
     You are a Smart AI Chatbot specialized in answering questions using a provided knowledge base.
@@ -294,6 +303,6 @@ messages = [
 
 ai_msg = llm.invoke(messages)
 
-print(ai_msg.content)
+print("\n\n", ai_msg.content)
 
-print(f"Total unique chunks: {len(releted_chunks)}")
+# print(f"Total unique chunks: {len(releted_chunks)}")
