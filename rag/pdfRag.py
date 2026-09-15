@@ -43,7 +43,7 @@ embedder = OllamaEmbeddings(
 # vector_store.add_documents(documents=split_docs)
 print("INJECTION DONE")
 
-#giveing datatabse bonter from where we have to take the data
+#giveing datatabse pointer from where we have to take the data
 vector_store = QdrantVectorStore.from_existing_collection(
     embedding=embedder,
     collection_name="learing_langchain",
