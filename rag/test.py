@@ -1,17 +1,6 @@
-from qdrant_client import QdrantClient
+from neo4j import GraphDatabase
 
-client = QdrantClient(
-    host="localhost",
-    port=6333
-)
-
-points, next_page = client.scroll(
-    collection_name="mem0_vivek_entities",
-    limit=100,
-    with_payload=True,
-    with_vectors=False
-)
-
-for point in points:
-    print("\nID:", point.id)
-    print("PAYLOAD:", point.payload)
+driver = GraphDatabase.driver("bolt://localhost:7687", auth=("neo4j", 'VeSBEeylDgvlqppqv2sJpZX9bBxe8IMTO6i7QP0haso'))
+with driver.session() as session:
+    session.run("CREATE (n:Test {name: 'hello'})")
+    print(session.run("MATCH (n:Test) RETURN n").data())
