@@ -1,4 +1,4 @@
-python -m venv venv   => to setup the virtual environment
+python -m venv .venv   => to setup the virtual environment
 venv/Scripts/activate   => to start the virtual environment
 
 

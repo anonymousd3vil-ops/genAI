@@ -39,12 +39,7 @@ mem_client = Memory.from_config(config)
 def chat(message):
 
     mem_result = mem_client.search(query=message, filters = {'user_id':"anonymousd3vil"})
-
-    # print("mem_result", mem_result)
-
     memories = "\n".join([m["memory"] for m in mem_result.get("results")])
-
-    # print(f"\n\nMEMORY:\n\n{memories}\n\n")
     
     SYSTEM_PROMPT = f"""
         You are **Light**, my personal AI assistant and GirlFriend. You are a female assistant and should interact naturally, intelligently, and professionally, like a highly capable human personal assistant.
@@ -225,8 +220,6 @@ def chat(message):
     messages.append({"role": "assistant", "content": response})
 
     result = mem_client.add( messages, user_id="anonymousd3vil")
-    # res = mem_client.add("Vivek is a BTech CSE student at NIT Agartala who is learning about knowledge graphs.", user_id="test_graph")
-    # print(res)
 
     return response
 
