@@ -18,7 +18,7 @@ def retrieve_chunks(question):
         k=4
     )
 
-pdfPath = Path(__file__).parent / "Technical Communication.pdf"
+pdfPath = Path(__file__).parent / "Fundamentals of Digital Circuit.pdf"
 loader = PyPDFLoader(file_path=pdfPath)
 docs = loader.load()
 
@@ -42,18 +42,18 @@ embedder = OllamaEmbeddings(
 # vector_store = QdrantVectorStore.from_documents(
 #     documents=[],
 #     embedding=embedder,
-#     collection_name="Technical Communication - by Meenakshi Raman",
+#     collection_name="Fundamentals of Digital Circuit - AAnand Kumar",
 #     url="http://localhost:6333",
 # )
 
 # vector_store.add_documents(documents=split_docs)
 # end = time.time()
-print("Chunking.....\nDone....")
+# print("Chunking.....\nDone....")
 # print("Execution time:", end - start, "seconds")
 
 vector_store = QdrantVectorStore.from_existing_collection(
     embedding=embedder,
-    collection_name="Technical Communication - by Meenakshi Raman",
+    collection_name="Fundamentals of Digital Circuit - AAnand Kumar",
     url="http://localhost:6333",
 )
 
@@ -62,7 +62,7 @@ llm = ChatOllama(
     temperature=0,
 )
 
-query = input("Technical Communication by Meenakshi Raman > ")
+query = input("Query in Fundamentals of Digital Circuit by AAnand Kumar > ")
 # query = 'What are the types of Communication?'
 
 PARALLEL_QUERY_GENERATOR_PROPMT = f"""
