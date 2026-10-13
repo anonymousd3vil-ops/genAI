@@ -1,0 +1,58 @@
+[
+    {
+        "course_id": "871159357154",
+        "course_name": "DSPM 2026",
+        "content_type": "assignment",
+        "title": "Assignment 4:: Problem Generation, Data Structures & Competitive Programming",
+        "item_id": "872470865357",
+        "created_time": "2026-08-30T18:16:01.770Z",
+        "updated_time": "2026-09-27T18:49:59.154Z",
+        "due_date": "2026-09-30T18:29:00",
+        "max_points": 100.0,
+        "url": "https://classroom.google.com/c/ODcxMTU5MzU3MTU0/a/ODcyNDcwODY1MzU3/details",
+        "state": "PUBLISHED",
+        "content": "Assignment: Assignment 4:: Problem Generation, Data Structures & Competitive Programming\n\nThink Like a Problem Setter: Design Challenging Data Structure & Programming Problems\n\nDear Students,\nAs part of the  class, you are required to prepare an assignment that goes beyond simply solving programming problems. The objective is to develop your ability to  similar to those encountered in competitive programming, technical interviews, coding assessments, and the software industry.\nEach student is required to .\nThe questions should be .\n\nThrough this assignment, you are expected to develop: through challenging programming scenarios.—the ability to formulate a programming problem from a real situation or computational concept.A deeper understanding of .The ability to identify the appropriate  for a problem.Skills in writing .The ability to analyze .\nAn understanding of how programming problems are designed for:\nCompetitive programming\nCoding interviews\nOnline programming assessments\nSoftware-development environments\nReal-world computational applications\nAttention\n\nEvery student must prepare . (Students are free to submit more than 20 question; they will be rewarded over and above) \nSubmit a single editable file (.docx or .pdf) comprising the problem, solution or output and an explanation of the solution.\n\n Merely collecting questions from websites, books, or AI-generated sources will not fulfill the purpose of this assignment. You are expected to .\n\nThe questions may be inspired by:\nProblems discussed in classroom\nClass tests\nSmall programming snippets discussed during lectures\nData-structure concepts\nCompetitive-programming problems\nTechnical-interview patterns\nReal-world programming situations\nThe  for constructing improved and more challenging problems.\n\nThe assignment will .\nThe primary emphasis will be on the .\n\nThe purpose of this assignment is .\n\nThe real objective is to learn how to .\n\nIn the software industry, competitive programming, coding interviews, and research environments, an important skill is not only knowing , but also knowing:\n\nTherefore, challenge yourself to create problems that make another programmer ."
+    },
+    {
+        "course_id": "871159357154",
+        "course_name": "DSPM 2026",
+        "content_type": "assignment",
+        "title": "Assignment 3:: CLASSIFICATION AND SELECTION OF LOOPS IN C PROGRAMMING",
+        "item_id": "869294755963",
+        "created_time": "2026-08-28T04:45:23.376Z",
+        "updated_time": "2026-08-28T05:29:57.264Z",
+        "due_date": "2026-08-30T18:29:00",
+        "max_points": 20.0,
+        "url": "https://classroom.google.com/c/ODcxMTU5MzU3MTU0/a/ODY5Mjk0NzU1OTYz/details",
+        "state": "PUBLISHED",
+        "content": "Assignment: Assignment 3:: CLASSIFICATION AND SELECTION OF LOOPS IN C PROGRAMMING\n\nHere  is a structured\nassignment for a DSPM class, designed to help students understand not\nonly the syntax of loops in C, but more importantly how to choose the\nappropriate loop for a particular problem.\n\nTopic: Understanding and Selecting for, while, and\ndo-while Loops in C\nObjective\n\nThe best loop is not the one that can solve the problem;\nthe best loop is the one that expresses the logic of the problem most\nnaturally.\n\n \nThe purpose of this assignment is to develop a clear\nunderstanding of different looping constructs in C programming and to help\nstudents identify which type of loop is most suitable for a given problem.\n\nStudents should not merely write programs using loops. They\nmust analyze the nature of a problem and justify why a particular loop\nstructure is appropriate.\n\nSubmit a detail document on the following\n\n1. HOW\nMANY TYPES OF LOOPS ARE THERE IN C?\n2. Describe the simple decision rules to select loop.\n\nASSIGNMENT ACTIVITY\n\nEvery student must submit at least one original\nprogramming problem based on loops.\n\nThe submitted problem must satisfy the following\nrequirement:\n\n3. Category A: for Loop\n\nDevelop a problem where the number of iterations is known in\nadvance.\n4. Category B: while Loop\n\nDevelop a problem where the number of iterations cannot be\nknown beforehand.\n5. Category C: do-while Loop\n\nDevelop a problem where the task must execute at least once.\n\n6. Category D: Write a program where it is not possible to use any other loop than while loop.\n7. Category E: Write a program where it is not possible to use any other loop than do-while loop.\n\nJustification of submission \n\nExplain why the selected particular loop with respect to the problem is the most suitable choice.\n\nIMPORTANT CHALLENGE\nStudents should remember the following:\nA programming problem can often be solved using more than\none type of loop. However, good programming is not only about making the\nprogram work. It is also about selecting the structure that best represents the\nlogic of the problem.\nTherefore, while preparing the assignment, first understand the nature of repetition."
+    },
+    {
+        "course_id": "871159357154",
+        "course_name": "DSPM 2026",
+        "content_type": "assignment",
+        "title": "Assignment 2: Create DOS Command list and learn basic implementation",
+        "item_id": "872024677093",
+        "created_time": "2026-08-08T15:40:13.750Z",
+        "updated_time": "2026-08-08T15:51:50.709Z",
+        "due_date": "2026-08-10T02:30:00",
+        "max_points": 10.0,
+        "url": "https://classroom.google.com/c/ODcxMTU5MzU3MTU0/a/ODcyMDI0Njc3MDkz/details",
+        "state": "PUBLISHED",
+        "content": "Assignment: Assignment 2: Create DOS Command list and learn basic implementation\n\n1. The objective of this\nassignment is to introduce students to basic DOS (Disk Operating System)\ncommands and develop familiarity with the Command Prompt environment.\nStudents will also practice creating and managing a simple list using\nappropriate commands.\n\n2. Short\nDescription\n\nBefore starting\nadvanced Data Structures topics, students should become comfortable with basic\ncommand-line operations. In this assignment, students will learn commonly used\nDOS commands such as DIR, CD, MD, RD, COPY, DEL, CLS, and TYPE.\n\nStudents will create a\nfolder structure using DOS commands and prepare a simple list of items, such as\nstudent names, subjects, or data-structure topics. The activity will help\nstudents understand how commands are used to create, view, modify, and manage\nfiles and directories.\n\n3. Learn Basic DOS\nCommands \n\n \n  \n   \n\n   \n\n  \n \n\n4. Assignment Task\n\nStudents are required\nto perform the following activities using Command Prompt:\n\n \nOpen Command Prompt.\n \nDisplay the current directory using DIR.\n \nCreate a folder named DS_ASSIGNMENT.\n \nEnter the newly created folder.\n \nCreate a text file named LIST.TXT.\n \nPrepare a list containing at least 3\n     items. For example: \n \n\n  \nNames of students\n  \nData Structure topics\n  \nProgramming languages\n  \nBooks\n \n\n \nDisplay the contents of the list using the\n     TYPE command.\n \nCreate a copy of the list with a different\n     filename.\n \nRename the copied file.\n \nDemonstrate at least five different DOS\n     commands and record their purpose and output.\n\n5. Submission\nRequirements\n\nStudents should\nsubmit: A single document file(.docx/pdf)\n\n \nA list of the DOS commands used.\n \nThe purpose of each command.\n \nThe commands executed during the activity.\n \nScreenshots showing the execution of the\n     commands.\n \nThe final list created using Command\n     Prompt.\n \nA short conclusion of approximately 5–6\n     lines.\n\n6. Expected\nLearning Outcome\n\nAfter completing this\nassignment, students should be able to:\n\n \nUnderstand the basic working environment\n     of DOS/Command Prompt.\n \nExecute common DOS commands.\n \nCreate and manage directories and files.\n \nCreate and display a simple list using the\n     command line.\n \nDevelop basic command-line skills that\n     will be useful for programming and Data Structures practical work.\n\n7. Conclusion\n\nThis introductory\nassignment provides students with hands-on experience in using DOS commands and\nmanaging simple data through the command line. It establishes basic\ncomputer-operation skills before moving toward more advanced Data Structures\nconcepts and programming exercises."
+    },
+    {
+        "course_id": "871159357154",
+        "course_name": "DSPM 2026",
+        "content_type": "assignment",
+        "title": "Assignment 1 ::      Every complex algorithm begins with a simple statement.",
+        "item_id": "871352055842",
+        "created_time": "2026-07-30T17:41:42.803Z",
+        "updated_time": "2026-07-30T17:51:22.345Z",
+        "due_date": "2026-07-31T14:30:00",
+        "max_points": 50.0,
+        "url": "https://classroom.google.com/c/ODcxMTU5MzU3MTU0/a/ODcxMzUyMDU1ODQy/details",
+        "state": "PUBLISHED",
+        "content": "Assignment: Assignment 1 ::      Every complex algorithm begins with a simple statement.\n\nWrite a C program that:\n\nAccepts  from the user.\n\nComputes their .\n\nDisplays the result in a meaningful format.\n\nInput\nEnter 2 numbers\n25\n17\n\nOutput\n\nThe sum of 25 and 17 is 42."
+    }
+]
