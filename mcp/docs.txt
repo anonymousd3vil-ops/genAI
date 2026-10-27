@@ -1,0 +1,14 @@
+PS C:\Study\BTech (CSE)\Generative AI\Coding Part\mcp> uv run fastmcp dev inspector main.py
+Need to install the following packages:
+@modelcontextprotocol/inspector@2.12.0
+Ok to proceed? (y) y
+Starting MCP inspector...
+
+MCP Inspector Web is up and running at:
+   http://127.0.0.1:6274?MCP_INSPECTOR_API_TOKEN=832a5eae2d72f54fa9194b1a2024d14940e574fb20b29ccc72cdc67562aecc0d
+
+   Sandbox (MCP Apps): http://127.0.0.1:6275/sandbox
+
+   Auth token: 832a5eae2d72f54fa9194b1a2024d14940e574fb20b29ccc72cdc67562aecc0d
+
+   Secrets: OS keychain

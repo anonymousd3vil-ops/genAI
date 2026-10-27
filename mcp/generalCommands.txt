@@ -1,0 +1,8 @@
+uv run fastmcp dev inspector main.py  -> to see the server on web interface
+
+fastmcp run main.py --no-banner --reload   -> to continusly sync the changes while running the server
+
+uv run fastmcp run main.py   -> to run the server
+
+
+uv run fastmcp install claude-desktop main.py   -> to install the mcp server on claude desktop
