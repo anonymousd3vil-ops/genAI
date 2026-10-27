@@ -1,0 +1,3 @@
+## Game Appearances
+
+Ho-Oh first appeared in Pokémon Gold and Silver (Generation 1) as a regional Pokémon in the Johto region. It has since been featured in all mainline Pokémon games, including HeartGold and SoulSilver (Generation 4), where it serves as a rare encounter in the Johto region. Ho-Oh's gameplay mechanics include the ability to be encountered in specific locations with high difficulty. The Pokémon has also appeared in spin-offs such as *Pokémon GO* and *Pokémon Mystery Dungeon*, where it is used as a symbol of hope. Its design has remained consistent across generations, emphasizing its role as a cultural icon.

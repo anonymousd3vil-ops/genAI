@@ -1,0 +1,3 @@
+## Historical Background
+
+Ho-Oh first appeared in the Pokémon anime series in the 1990s as one of the legendary Pokémon. In game lore, it was introduced in Pokémon Gold and Silver (Generation 1) as a regional Pokémon of the Johto region. Ho-Oh's connection to the Burned Tower—a sacred site in the Johto region—emphasizes its role as a guardian of the region's spiritual heritage. The Pokémon is historically significant as one of the few legendary Pokémon that appeared in both the anime and early video games, establishing its importance in the franchise's foundational mythology.

@@ -1,0 +1,102 @@
+# Task: Generate a Comprehensive Knowledge Base About Ho-Oh
+
+You are a Pokémon lore researcher and technical documentation writer. Your task is to create a comprehensive, well-structured knowledge base about **Ho-Oh**, the Legendary Pokémon.
+
+Create the following five Markdown files inside the directory `/history_and_importance_of_hooh/`:
+
+1. `historical_background.md`
+2. `cultural_impact.md`
+3. `mythology_and_symbolism.md`
+4. `game_appearances.md`
+5. `unique_traits_and_abilities.md`
+
+## Content Requirements
+
+### 1. `historical_background.md`
+Document Ho-Oh's historical background and origins, including:
+- Its earliest known appearances in Pokémon media.
+- Its introduction in the Pokémon anime and its significance.
+- Its history and connection to the Burned Tower and the legendary beasts.
+- Its historical role in the Johto region.
+- Important lore, legends, and events associated with Ho-Oh.
+
+### 2. `cultural_impact.md`
+Explain Ho-Oh's cultural significance throughout Pokémon media, including:
+- Important appearances in the anime and Pokémon movies.
+- Its influence on the Pokémon franchise and fan community.
+- Its presence in merchandise, trading cards, promotional material, and other media.
+- Its association with hope, mystery, rebirth, and legendary status.
+- Memorable moments and references that contributed to its popularity.
+
+### 3. `mythology_and_symbolism.md`
+Explore the mythology and symbolism associated with Ho-Oh, including:
+- Connections to the phoenix and other mythological birds.
+- Symbolism involving rebirth, renewal, immortality, and hope.
+- Its relationship with the sun, sacred fire, and the rainbow.
+- The significance of the Rainbow Wing and Bell Tower.
+- Its relationship with Lugia and the legendary beasts, where relevant.
+- Distinguish confirmed Pokémon canon from interpretations inspired by real-world mythology.
+
+### 4. `game_appearances.md`
+Provide a detailed account of Ho-Oh's appearances in Pokémon video games and related media, including:
+- Its debut and appearances across the mainline Pokémon games.
+- Its role in Pokémon Gold, Silver, Crystal, HeartGold, and SoulSilver.
+- Its availability, locations, encounter requirements, and relevant game mechanics.
+- Its appearances in spin-offs, mobile games, and other official Pokémon titles.
+- Its anime, movie, and other non-game appearances where relevant.
+- Relevant forms, special encounters, events, and notable differences between games.
+
+Organize appearances chronologically or by media category. Clearly distinguish mainline games, spin-offs, anime, movies, and trading card appearances.
+
+### 5. `unique_traits_and_abilities.md`
+Describe Ho-Oh's defining characteristics, including:
+- Its Pokédex classification, typing, species characteristics, and design.
+- Base stats and battle strengths.
+- Its signature move, Sacred Fire, and its mechanics.
+- Its standard ability, Regenerator, and its effects.
+- Its learnable moves, competitive strengths, weaknesses, and battle strategies.
+- Its design inspiration, multicolored feathers, and visual symbolism.
+- Differences in stats, moves, abilities, and mechanics across game generations.
+
+## Research and Accuracy Rules
+
+1. Prioritize official Pokémon sources, official Pokédex entries, game documentation, and reputable reference sources.
+2. Verify factual claims before including them. Do not invent events, game appearances, abilities, moves, or lore.
+3. Clearly distinguish official canon, secondary-source reporting, and personal interpretation.
+4. When a detail cannot be verified, omit it or explicitly mark it as uncertain.
+5. Do not repeat unsupported claims merely because they appear in fan discussions.
+6. Use the correct official names of Pokémon, games, characters, locations, moves, and abilities.
+7. Keep historical lore separate from gameplay mechanics.
+8. Include source links and citations for important factual claims wherever research tools or source material are available.
+
+## Writing and Formatting Requirements
+
+- Write every file in Markdown.
+- Begin each file with an appropriate level-two heading (`##`).
+- Use descriptive subheadings, bullet lists, numbered lists, and tables where appropriate.
+- Explain specialized Pokémon terminology clearly.
+- Avoid unnecessary repetition across the five documents.
+- Make each document independently understandable while maintaining consistency across the knowledge base.
+- Include concrete examples and specific game titles rather than vague generalizations.
+- Maintain an informative, neutral, research-oriented tone.
+- Do not pad the documents with repetitive or irrelevant information.
+
+## File Creation Instructions
+
+Use the available file-writing tool to create the five files at the exact paths listed below:
+
+- `/history_and_importance_of_hooh/historical_background.md`
+- `/history_and_importance_of_hooh/cultural_impact.md`
+- `/history_and_importance_of_hooh/mythology_and_symbolism.md`
+- `/history_and_importance_of_hooh/game_appearances.md`
+- `/history_and_importance_of_hooh/unique_traits_and_abilities.md`
+
+If the directory does not exist, create it first. Write complete content to each file, not summaries or placeholders.
+
+Before finishing:
+1. Confirm that all five files were created successfully.
+2. Verify that each file contains meaningful, non-repetitive content.
+3. Check factual consistency across the documents.
+4. Report the paths of all created files and provide a brief description of each.
+
+**Important:** If file-writing tools are unavailable, return the complete Markdown content for all five files separately, clearly labeled with their intended filenames. Never claim that files were created unless the tool confirms their creation.

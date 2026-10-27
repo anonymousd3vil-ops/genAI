@@ -1,0 +1,3 @@
+## Unique Traits and Abilities
+
+Ho-Oh is a Fire/Flying-type Pokémon with base stats reflecting its role as a guardian of the sun. Its signature move, *Sacred Fire*, deals high damage and has a chance to burn the target. Ho-Oh possesses the ability *Regenerator*, which heals the Pokémon after being hit. In competitive battles, Ho-Oh's high speed and fire-type attacks make it a formidable opponent. Its multicolored feathers symbolize the sun and rainbow, while its design reflects its role as a guardian of hope and renewal. Ho-Oh's mechanics have evolved across generations, with new abilities and moves added in later games.
